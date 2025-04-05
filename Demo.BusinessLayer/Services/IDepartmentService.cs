@@ -8,6 +8,6 @@ namespace Demo.BusinessLayer.Services
         bool Delete(int id);
         IEnumerable<DepartmentResponse> GetAll();
         DepartmentDetailsResponse? GetById(int id);
-        int Update(DepartmentCreateRequest request);
+        int Update(DepartmentUpdateRequest request);
     }
 }

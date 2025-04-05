@@ -23,7 +23,7 @@
             return _repository.Add(department);
         }
 
-        public int Update(DepartmentCreateRequest request)
+        public int Update(DepartmentUpdateRequest request)
         {
             var department = request.ToEntity();
             return _repository.Update(department);

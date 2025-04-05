@@ -11,5 +11,6 @@
         //     // optionsBuilder.UseSqlServer("server=LAPTOP-I0R4OA4K\\MYSQLSERVER;Database=DemoMVCG03;Trusted_Connection=true;TrustServerCertificate=true;");
         // }
         public DbSet<Department> Departments { get; set; }
+        public DbSet<Employee> Employees { get; set; }
     }
 }

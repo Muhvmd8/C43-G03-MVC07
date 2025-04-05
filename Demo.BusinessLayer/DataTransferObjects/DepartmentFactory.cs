@@ -10,7 +10,6 @@ public static class DepartmentFactory
         Name = request.Name,
 
     };
-
     public static Department ToEntity(this DepartmentUpdateRequest request) => new()
     {
         Id = request.Id,
@@ -28,7 +27,6 @@ public static class DepartmentFactory
         Id = department.Id,
         Name = department.Name,
     };
-
     public static DepartmentDetailsResponse ToDetailsResponse(this Department department) => new()
     {
         Code = department.Code,
@@ -41,5 +39,14 @@ public static class DepartmentFactory
         IsDeleted = department.IsDeleted,
         LastModifiedOn = department.LastModifiedOn
 
+    };
+
+    public static DepartmentUpdateRequest ToRequest(this DepartmentDetailsResponse department) => new()
+    {
+        Id = department.Id,
+        Name = department.Name,
+        Code = department.Code,
+        CreateOn = department.CreateOn,
+        Description = department.Description
     };
 }

@@ -12,6 +12,6 @@ class DepartmentConfigurations : IEntityTypeConfiguration<Department>
             .IsRequired(true);
 
         builder.Property(d => d.CreateOn)
-            .HasDefaultValue("GETDATE()"); // DateTime
+            .HasDefaultValue(DateTime.Now); // DateTime
     }
 }

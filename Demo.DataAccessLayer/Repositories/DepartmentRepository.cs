@@ -9,7 +9,7 @@ public class DepartmentRepository(ApplicationDbContext context) // Injection
     public Department? GetById(int id) => _context.Departments.Find(id);
     // Get All 
     public IEnumerable<Department> GetAll(bool withTracking = false)
-        => withTracking ? _context.Departments.Where(d => !d.IsDeleted).ToList() :
+        => withTracking? _context.Departments.Where(d => !d.IsDeleted).ToList() :
         _context.Departments.AsNoTracking().Where(d => !d.IsDeleted).ToList();
 
     // Add

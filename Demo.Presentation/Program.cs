@@ -1,6 +1,5 @@
-using Demo.DataAccessLayer.Data.Context;
-using Demo.DataAccessLayer.Repositories;
-using Microsoft.EntityFrameworkCore;
+using Demo.DataAccessLayer.Models;
+
 namespace Demo.Presentation;
 public class Program
 {
@@ -19,6 +18,9 @@ public class Program
         });
 
         builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+        builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+        builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();  
+        //builder.Services.AddScoped<IGenericRepository<Employee>, GenericRepository<Employee>>();
 
         var app = builder.Build();
 
